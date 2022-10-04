@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="config" class="com.robotix.constructors.Config">
+        <constructor-arg index="0" ref="settings"/>
+        <constructor-arg index="1" ref="source"/>
+        <constructor-arg index="2" value="xmlsetings"/>
+    </bean>
+
+    <bean id="settings" class="com.robotix.constructors.Settings">
+        <constructor-arg value="RestApi"/>
+    </bean>
+
+    <bean id="source" class="com.robotix.constructors.Source">
+        <constructor-arg value="some_api_https_adress"/>
+    </bean>
+</beans>
